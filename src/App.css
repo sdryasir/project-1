@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+.navbar .navbar-nav .nav-link {
+    color: #eee;
+    text-transform: uppercase!important;
+}
+.navbar .navbar-nav .nav-link i::before {
+  font-size: 1.4rem;
+}
+.lead-text>*{
+  text-transform: uppercase;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/**-----------------INNER PAGE-------------*/
+.inner-page-wrapper{
+  background-color: #eee;
+  padding: 20px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.inner-head-content{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+}
+.inner-head-content *{
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
 }
 
-.App-link {
-  color: #61dafb;
+/*-----------------CART PAGE---------------*/
+.cart-items-wrapper table img{
+  width: 100px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cart-items-wrapper table tr td{
+  vertical-align: middle;
+}
+/*-----------------FOOTER------------------*/
+.credit-wrapper{
+  background-color: #333;
+}
+.credit-inner{
+display: flex;
+  justify-content: space-between;
+}
+.credit-wrapper ul{
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.credit-wrapper ul li{
+  list-style-type: none;
+  margin: 0.26rem;
+}
+.credit-wrapper ul li a{
+  color: #666;
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: 0.3s all ease-in-out;
+}
+.credit-wrapper ul li a:hover{
+  text-decoration: underline;
+}
+.credit-wrapper ul li span{
+  color: #666;
+  font-size: 0.8rem;
+}
+.footer-wrapper{
+  padding: 4rem 0;
+  background-color: #222;
+}
+.footer-wrapper ul{
+  margin: 0;
+  padding: 0;
+}
+.footer-wrapper ul li{
+  margin: 0.25rem 0;
+}
+.footer-wrapper ul li a{
+  color: #eee;
+  text-decoration: none;
+  font-size: 0.9rem;
 }
