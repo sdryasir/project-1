@@ -4,9 +4,10 @@ import {
     Route,
     Link
 } from "react-router-dom";
-import CardList from "./cardlisting";
-import Cart from "./cart";
-const header = () => {
+import CardList from "../../collections/cardlisting";
+import Cart from "../../collections/cart";
+import Slider from "../../components/slider";
+function header() {
     return (
         <>
             <Router>
@@ -23,27 +24,27 @@ const header = () => {
                                         <Link className="nav-link active" to="/">Home</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" href="#">make it a deal</a>
+                                        <Link className="nav-link active" to="/">make it a deal</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" href="#">signature boxes</a>
+                                        <Link className="nav-link active" to="/">Signature box</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" href="#">sharing</a>
+                                        <Link className="nav-link active" to="/">sharing</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" href="#">promotions</a>
+                                        <Link className="nav-link active" to="/">promotions</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" href="#">snacks</a>
+                                        <Link className="nav-link active" to="/">Snacks</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" href="#">midnight deals</a>
+                                        <Link className="nav-link active" to="/">midnight deals</Link>
                                     </li>
                                 </ul>
                                 <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
                                     <li className="nav-item">
-                                        <a className="nav-link" href="#"><i className="bi bi-person-circle"></i></a>
+                                        <Link className="nav-link active" to="/"><i className="bi bi-person-circle"></i></Link>
                                     </li>
                                     <li className="nav-item">
                                         <Link className="nav-link active" to="/cart"><i className="bi bi-cart-check-fill"></i></Link>
@@ -53,8 +54,9 @@ const header = () => {
                         </div>
                     </nav>
                     <Switch>
-                        <Route path="/">
-                            <Cart />
+                        <Route exact path="/">
+                            <Slider />
+                            <CardList />
                         </Route>
                         <Route path="/cart">
                             <Cart />

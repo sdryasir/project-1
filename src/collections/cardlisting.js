@@ -1,6 +1,6 @@
-import { products } from '../data'
-import Card from "./card";
-const cardList = () => {
+import { products } from '../data/products'
+import Card from "../components/card";
+function cardList() {
     return (
         <>
             <div className="page-wrapper" style={{ padding: "30px 0 60px 0" }}>
