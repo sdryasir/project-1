@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import CardList from "../../collections/cardlisting";
 import Cart from "../../collections/cart";
+import Bank from '../../components/bank';
 import Slider from "../../components/slider";
 function header() {
     return (
@@ -24,7 +25,7 @@ function header() {
                                         <Link className="nav-link active" to="/">Home</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className="nav-link active" to="/">make it a deal</Link>
+                                        <Link className="nav-link active" to="/bank">Bank</Link>
                                     </li>
                                     <li className="nav-item">
                                         <Link className="nav-link active" to="/">Signature box</Link>
@@ -57,6 +58,9 @@ function header() {
                         <Route exact path="/">
                             <Slider />
                             <CardList />
+                        </Route>
+                        <Route path="/bank">
+                            <Bank />
                         </Route>
                         <Route path="/cart">
                             <Cart />
