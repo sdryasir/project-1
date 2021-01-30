@@ -5,6 +5,7 @@ const Card = (props) => {
     const addToCart = p => {
         setCart([...cart, p])
     }
+    console.log(cart)
 
     return (
         <div className="col-md-4 g-4" key={props.product.id}>

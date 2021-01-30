@@ -12,7 +12,8 @@ function Bank() {
         else
             setError('')
         if (amount > 0) {
-            setBalance(amount);
+            setBalance(balance + parseInt(amount));
+            setAmount('')
         }
         else {
             setError('Please provide positive value')
@@ -20,16 +21,25 @@ function Bank() {
 
     }
     const handleWithdraw = () => {
-        if (amount == '')
+        if (amount == '') {
             setError('Please provide an input value')
-        else
-            setError('')
+        }
+        else {
+            if (balance > amount) {
+                setBalance(balance - amount)
+                setAmount('')
+            } else {
+                setError('Insufficient balance in your account')
+            }
+        }
+
+
     }
     return (
         <div style={{ padding: "30px 0" }}>
             <h3><small>Mini Bank Assignment</small></h3>
             <p><strong>Available Balance: {balance}</strong></p>
-            <input className="form-control w-25 d-inline" onChange={(e) => handleChange(e)} placeholder="Enter an Amount" type="text" />
+            <input className="form-control w-25 d-inline" value={amount} onChange={(e) => handleChange(e)} placeholder="Enter an Amount" type="text" />
             <p style={{ color: "red" }}>{error}</p>
             <button className="btn btn-primary" onClick={handleDeposit}>Deposit</button>
             <button className="btn btn-info m-2" onClick={handleWithdraw}>Withdraw</button>
