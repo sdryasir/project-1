@@ -26,9 +26,6 @@ function Cart() {
 
     ])
     const [total, setTotal] = useState(0)
-    const [grandTotal, setGrandTotal] = useState(0)
-
-
 
     const incHandler = (p) => {
         let arr = [...qty];
@@ -56,6 +53,14 @@ function Cart() {
     const removeCartHandler = (item) => {
         let array = qty.filter((p) => p.id != item.id)
         setQty(array)
+    }
+
+    function gradTotal(products) {
+        let total = 0;
+        for (let i = 0; i < products.length; i++) {
+            total = total + products[i].price * products[i].qty
+        }
+        return total;
     }
 
     return (
@@ -112,7 +117,7 @@ function Cart() {
                         </div>
                         <div className="total-price text-end mb-5">
                             <span>Total Price: </span>
-                            <span><strong>PKR {grandTotal}</strong></span>
+                            <span><strong>PKR {gradTotal(qty)}</strong></span>
                         </div>
                         <div className="cart-exit-btn d-flex justify-content-between">
                             <a href="#" className="btn btn-primary">continue shopping</a>
