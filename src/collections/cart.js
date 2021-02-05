@@ -1,10 +1,8 @@
-//import { cartdata } from "../data/cartdata";
-//import CartItem from "../components/cartItem";
 import { useState } from 'react'
 import cartImg from '../empty-cart.png'
 
 function Cart() {
-    const [qty, setQty] = useState([
+    const [product, setProduct] = useState([
         {
             id: 1,
             title: "Krunch Burger ",
@@ -25,36 +23,26 @@ function Cart() {
         },
 
     ])
-    const [total, setTotal] = useState(0)
-
     const incHandler = (p) => {
-        let arr = [...qty];
+        let arr = [...product];
         p.qty = p.qty + 1
-        //console.log(arr)
-        setQty(arr)
-
+        setProduct(arr)
     }
-
     const decHandler = (p) => {
-        let arr = [...qty];
+        let arr = [...product];
         p.qty = p.qty - 1
         if (p.qty < 1) {
             removeCartHandler(p)
         } else {
-            setQty(arr)
+            setProduct(arr)
         }
-
     }
-
     function changeHandler() {
-
     }
-
     const removeCartHandler = (item) => {
-        let array = qty.filter((p) => p.id != item.id)
-        setQty(array)
+        let array = product.filter((p) => p.id != item.id)
+        setProduct(array)
     }
-
     function gradTotal(products) {
         let total = 0;
         for (let i = 0; i < products.length; i++) {
@@ -82,7 +70,7 @@ function Cart() {
             </div>
             <section className="cart-items-wrapper pt-5 pb-5">
                 {
-                    qty.length != 0 ? <>
+                    product.length != 0 ? <>
                         <div className="table-responsive">
                             <table className="table">
                                 <thead>
@@ -90,14 +78,14 @@ function Cart() {
                                         <th scope="col" class="">Image</th>
                                         <th scope="col">Product Name</th>
                                         <th scope="col">price</th>
-                                        <th scope="col" style={{ width: "15%" }}>Qty</th>
+                                        <th scope="col" style={{ width: "15%" }}>product</th>
                                         <th scope="col">Action</th>
                                         <th scope="col">Total</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {
-                                        qty.map((p) => <tr key={p.title}>
+                                        product.map((p) => <tr key={p.title}>
                                             <td><img src={p.image} alt="" /></td>
                                             <td>{p.title}</td>
                                             <td>{p.price}</td>
@@ -117,7 +105,7 @@ function Cart() {
                         </div>
                         <div className="total-price text-end mb-5">
                             <span>Total Price: </span>
-                            <span><strong>PKR {gradTotal(qty)}</strong></span>
+                            <span><strong>PKR {gradTotal(product)}</strong></span>
                         </div>
                         <div className="cart-exit-btn d-flex justify-content-between">
                             <a href="#" className="btn btn-primary">continue shopping</a>
@@ -131,7 +119,4 @@ function Cart() {
         </>
     );
 };
-
-
-
 export default Cart;
