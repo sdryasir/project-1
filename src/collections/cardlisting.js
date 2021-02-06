@@ -1,5 +1,5 @@
 import { products } from '../data/products'
-import Card from "../components/card";
+import Card from "../common/card";
 function cardList() {
     return (
         <>

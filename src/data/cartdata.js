@@ -1,4 +1,4 @@
-export const cartdata = [
+export const cartData = [
     {
         id: 1,
         title: "Krunch Burger ",
@@ -6,7 +6,7 @@ export const cartdata = [
         description: "Enjoy the crispy chicken fillet in a soft bun with spicy mayo and our signature sauce with fresh lettuce.",
         price: 195,
         stock: 10,
-        qty: 0
+        qty: 1
     },
     {
         id: 2,
@@ -15,7 +15,7 @@ export const cartdata = [
         description: "Krunch burger with a regular drink.",
         price: 265,
         stock: 3,
-        qty: 0
+        qty: 3
     },
 
 ]
