@@ -78,3 +78,41 @@ display: flex;
   text-decoration: none;
   font-size: 0.9rem;
 }
+
+.overlay-wrapper{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 2;
+}
+.cart-drawer{
+  position: fixed;
+  background-color: #fff;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 30%;
+  z-index: 3;
+}
+.cart-drawer-head{
+  position: absolute;
+  width: 100%;
+  background-color: #222;
+  color: #fff;
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart-drawer-head div:nth-child(2){
+  background-color: #f00;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
