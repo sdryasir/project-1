@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function Product(props) {
     const id = props.match.params.id
-    let prod = products.filter(p => p.id == id)
+    let prod = products.filter(p => p.id === id)
     const [qty, setQty] = useState(1)
     const [drawer, setDrawer] = useState(false)
 
@@ -58,7 +58,6 @@ function Product(props) {
             {
                 drawer ? <>
                     <div className="overlay-wrapper" onClick={() => setDrawer(false)}>
-
                     </div>
                     <div className="cart-drawer">
                         <div className="cart-drawer-head">

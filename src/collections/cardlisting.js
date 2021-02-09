@@ -9,7 +9,7 @@ function cardList() {
                         <h2>sharing meals</h2>
                     </div>
                     <div className="row">
-                        {products.map(p => <Card product={p} />)}
+                        {products.map(p => <Card product={p} key={p.id} />)}
                     </div>
                 </div>
             </div>

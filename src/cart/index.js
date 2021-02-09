@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import cartImg from '../empty-cart.png'
 import { cartData } from '../data/cartdata'
+import { Link } from 'react-router-dom'
 
 function Cart() {
     const [product, setProduct] = useState(cartData)
@@ -22,7 +23,7 @@ function Cart() {
     function changeHandler() {
     }
     const removeCartHandler = (item) => {
-        let array = product.filter((p) => p.id != item.id)
+        let array = product.filter((p) => p.id !== item.id)
         setProduct(array)
     }
     function gradTotal(products) {
@@ -52,7 +53,7 @@ function Cart() {
             </div>
             <section className="cart-items-wrapper pt-5 pb-5">
                 {
-                    product.length != 0 ? <>
+                    product.length !== 0 ? <>
                         <div className="table-responsive">
                             <table className="table">
                                 <thead>
@@ -90,7 +91,7 @@ function Cart() {
                             <span><strong>PKR {gradTotal(product)}</strong></span>
                         </div>
                         <div className="cart-exit-btn d-flex justify-content-between">
-                            <a href="#" className="btn btn-primary">continue shopping</a>
+                            <Link to="/" className="btn btn-primary">continue shopping</Link>
                             <input type="button" className="btn btn-primary" value="checkout" />
                         </div>
                     </> : <>

@@ -116,3 +116,22 @@ display: flex;
   align-items: center;
   justify-content: center;
 }
+.cart-wrap{
+  position: relative;
+}
+.cart-item-count{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #f00;
+  top: -2px;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 8px;
+}
