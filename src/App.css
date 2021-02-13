@@ -7,6 +7,9 @@
 }
 .lead-text>*{
   text-transform: uppercase;
+  border: 1px solid #eee;
+  text-align: center;
+  padding: 8px;
 }
 
 
@@ -134,4 +137,16 @@ display: flex;
   font-weight: bold;
   font-size: 12px;
   padding: 8px;
+}
+.sorting-drp div{
+  font-size: 11px;
+  color: #999;
+}
+.sorting-drp select{
+  border: 0;
+  border-bottom: 2px solid #e21e2d;
+  -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   font-size: 14px;
 }

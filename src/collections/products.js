@@ -10,6 +10,19 @@ function Products() {
                 <div className="lead-text">
                     <h2>{slug}</h2>
                 </div>
+                <div className="sorting d-flex justify-content-end">
+                    <div className="sorting-drp">
+                        <div>Sort By</div>
+                        <select>
+                            <option value="Latest">Latest</option>
+                            <option value="Oldest">Oldest</option>
+                            <option value="A-Z">A-Z</option>
+                            <option value="Z-A">Z-A</option>
+                            <option value="Price(Low to High)">Price(Low to High)</option>
+                            <option value="Price(High to Low)">Price(High to Low)</option>
+                        </select>
+                    </div>
+                </div>
                 <div className="row">
                     {prod.map(pp => <Card product={pp} key={pp.id} />)}
                 </div>

@@ -36,6 +36,9 @@ function header() {
                             </ul>
                             <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
                                 <li className="nav-item">
+                                    <Link className="nav-link active" to="/account/location"><i class="bi bi-geo-alt-fill"></i></Link>
+                                </li>
+                                <li className="nav-item">
                                     <Link className="nav-link active" to="/account/login"><i className="bi bi-person-circle"></i></Link>
                                 </li>
                                 <li className="nav-item cart-wrap">
