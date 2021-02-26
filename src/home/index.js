@@ -4,7 +4,7 @@ import Slider from "./slider";
 function Home() {
     return (
         <>
-            <Slider />
+            {/* <Slider /> */}
             <CardList />
         </>
     )
